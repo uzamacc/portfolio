@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@font-face {
+  font-family: "Bisakata";
+  src: url("/fonts/BisakataDemoRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #ffffff;
+  --secondary: #1a1a1a;
+  --muted: #888888;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+
+  /* Custom Spacing - Sensible section padding */
+  --spacing-section: clamp(4rem, 8vw, 10rem);
+  --spacing-container: 4rem; /* 64px - reliable fixed value */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Playfair Display", serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.text-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.text-reveal span {
+  display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.floating-image {
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.grid-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grid-hover:hover {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+.font-bisakata {
+  font-family: "Bisakata", serif;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #a3a3a3 30%,
+    #525252 65%,
+    #171717 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
