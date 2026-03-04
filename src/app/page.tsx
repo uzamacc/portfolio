@@ -17,7 +17,7 @@ export default function Home() {
       <DetailedSkills />
       <EmploymentHistory />
       {/* <WorkGrid /> */}
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
